@@ -3,17 +3,37 @@ html{
     margin: 0;
     padding: 0;
 }
-body 
-{
+body{
     margin: 0;
-    padding: 0;
-    height: 100px;
-    width: 100px;
+    padding: 0; 
+    background-color: red;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 10px;
+    -webkit-app-region: drag;
+}
+#closeButton{
+    margin-right: 10px;
+    filter: invert(87%) sepia(16%) saturate(2%) hue-rotate(224deg) brightness(116%) contrast(101%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
+#openBtn 
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    height: 110px;
 }
 h1{
     color: white;
+    -webkit-user-select: none;
+}
+h2{
+    -webkit-user-select: none;
 }

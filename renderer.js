@@ -1,20 +1,22 @@
-const shell = require('electron').shell
+const { app } = require('electron');
 var ks = require('node-key-sender');
-
+let closeButton = document.querySelector("#closeButton");
 const openBtn = document.getElementById('openBtn')
 const onOff = document.querySelector("#onOff");
+const body = document.querySelector("body");
 let isOn = false;
-
 let refreshIntervalId;
 
-function pressionarTecla (){
-// shell.openPath("Background.vbs")    
+closeButton.addEventListener('click', function(){
+  window.close();
+})
+
+function pressionarTecla (){ 
 ks.sendKey('a')
 }
 
-
 openBtn.addEventListener('click', function (event) {
-  openBtn.style.backgroundColor= (isOn? "red": "green");
+  body.style.backgroundColor= (isOn? "red": "green");
   isOn= (isOn? false:true)
   onOff.innerHTML=(isOn? "On":"Off")
   refreshIntervalId = (isOn? setInterval(pressionarTecla, 2000):clearInterval(refreshIntervalId))

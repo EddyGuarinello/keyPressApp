@@ -3,16 +3,12 @@ const path = require('path');
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 100,
-    height: 100,
+    width: 120,
+    height: 120,
     alwaysOnTop:true,
     titleBarStyle: 'hidden',
-    focusable: false,
-    titleBarOverlay: {
-      height: 5,
-      symbolColor: "white",
-      color: "black",
-    },
+    focusable: true,
+    roundedCorners:true,
     closable:true,
     x:0,
     y:0,
