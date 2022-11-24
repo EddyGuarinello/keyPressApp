@@ -8,6 +8,11 @@ const createWindow = () => {
     alwaysOnTop:true,
     titleBarStyle: 'hidden',
     focusable: false,
+    titleBarOverlay: {
+      height: 5,
+      symbolColor: "white",
+      color: "black",
+    },
     closable:true,
     x:0,
     y:0,
