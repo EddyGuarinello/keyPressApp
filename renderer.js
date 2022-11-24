@@ -12,12 +12,13 @@ closeButton.addEventListener('click', function(){
 })
 
 function pressionarTecla (){ 
-ks.sendKey('a')
+ks.sendKey('f')
+
 }
 
 openBtn.addEventListener('click', function (event) {
   body.style.backgroundColor= (isOn? "red": "green");
   isOn= (isOn? false:true)
   onOff.innerHTML=(isOn? "On":"Off")
-  refreshIntervalId = (isOn? setInterval(pressionarTecla, 2000):clearInterval(refreshIntervalId))
+  refreshIntervalId = (isOn? setInterval(pressionarTecla, 1000):clearInterval(refreshIntervalId))
 })

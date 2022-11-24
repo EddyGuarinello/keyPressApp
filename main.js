@@ -7,7 +7,7 @@ const createWindow = () => {
     height: 120,
     alwaysOnTop:true,
     titleBarStyle: 'hidden',
-    focusable: true,
+    focusable: false,
     roundedCorners:true,
     closable:true,
     x:0,
